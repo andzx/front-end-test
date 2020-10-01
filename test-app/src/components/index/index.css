@@ -1,0 +1,97 @@
+header.header-index {
+    margin:0 auto;
+    position:relative;
+}
+
+header.header-index > h1 {
+    max-width:425px;
+    margin-top:80px;
+    font-family:"ArticulatCF", "ArticulatCFv2";
+}
+
+header.header-index > p {
+    margin:0;
+    max-width:475px;
+    font-weight:bold;
+    font-family:"ArticulatCF", "ArticulatCFv2";
+    font-weight:light;
+    line-height:17pt;
+}
+
+header.header-index > p.arrow-bottom {
+    display:table;
+    font-size:48pt;
+    line-height:48pt;
+    margin-left:-10px;
+}
+
+header.header-index > h1 {
+    font-size:56pt;
+    line-height:52pt;
+    margin-bottom:28px;
+    font-family:"ArticulatCF";
+}
+
+.line {
+    width:150%;
+    position:absolute;
+    z-index:-1;
+}
+
+.line-narrow {
+    height:15px;
+}
+
+.line-thick {
+    height:55px;
+    top:130px;
+}
+
+.line-one {
+    left:-175px;
+    top:235px;
+    transform:rotate(-17deg);
+    transform-origin:left;
+}
+
+.line-two {
+    left:-155px;
+    top:215px;
+    transform:rotate(-7.5deg);
+    transform-origin:left;
+}
+
+.line-three {
+    left:-175px;
+    top:60px;
+    transform:rotate(10.5deg);
+    transform-origin:left;
+    z-index:-3;
+}
+
+@media (min-width: 768px) {
+    header.header-index > h1,
+    header.header-index > p {
+        margin-left:60px;
+    }
+
+    header.header-index > p.arrow-bottom {
+        margin-left:50px;
+    }
+    
+    .line-one {
+        left:-175px;
+        top:240px;
+        transform:rotate(-15deg);
+    }
+
+    .line-two {
+        left:-155px;
+        top:225px;
+    }
+
+    .line-three {
+        left:-175px;
+        top:50px;
+    }
+}

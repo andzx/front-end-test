@@ -1,38 +1,157 @@
-.App {
-  text-align: center;
+/* Import fonts */
+@font-face {
+    font-family:"ArticulatCF";
+    src:url(./fonts/ArticulatCF-DemiBoldOblique.otf?raw=true) format('opentype'),
+        url(./fonts/ArticulatCF-DemiBoldOblique.ttf?raw=true) format('truetype');
+    font-weight:600;
+    font-style:oblique;
+}
+@font-face {
+    font-family:"ArticulatCF";
+    src:url(./fonts/ArticulatCF-ExtraBold.otf?raw=true) format('opentype'),
+        url(./fonts/ArticulatCF-ExtraBold.ttf?raw=true) format('truetype');
+    font-weight:800;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+    font-family:"ArticulatCF";
+    src:url(./fonts/ArticulatCF-ExtraBoldOblique.otf?raw=true) format('opentype'),
+        url(./fonts/ArticulatCF-ExtraBoldOblique.ttf?raw=true) format('truetype');
+    font-weight:800;
+    font-style:oblique;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@font-face {
+    font-family:"ArticulatCF";
+    src:url(./fonts/ArticulatCF-ExtraLight.otf?raw=true) format('opentype'),
+        url(./fonts/ArticulatCF-ExtraLight.ttf?raw=true) format('truetype');
+    font-weight:200;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+@font-face {
+    font-family:"ArticulatCF";
+    src:url(./fonts/ArticulatCF-ExtraLightOblique.otf?raw=true) format('opentype'),
+        url(./fonts/ArticulatCF-ExtraLightOblique.ttf?raw=true) format('truetype');
+    font-weight:200;
+    font-style:oblique;
 }
 
-.App-link {
-  color: #61dafb;
+@font-face {
+    font-family:"ArticulatCF";
+    src:url(./fonts/ArticulatCF-Heavy.otf?raw=true) format('opentype'),
+        url(./fonts/ArticulatCF-Heavy.ttf?raw=true) format('truetype');
+    font-weight:900;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@font-face {
+    font-family:"ArticulatCF";
+    src:url(./fonts/ArticulatCF-HeavyOblique.otf?raw=true) format('opentype'),
+        url(./fonts/ArticulatCF-HeavyOblique.ttf?raw=true) format('truetype');
+    font-weight:900;
+    font-style:oblique;
+}
+
+@font-face {
+    font-family:"ArticulatCF";
+    src:url(./fonts/ArticulatCF-Light.otf?raw=true) format('opentype'),
+        url(./fonts/ArticulatCF-Light.ttf?raw=true) format('truetype');
+    font-weight:300;
+}
+
+@font-face {
+    font-family:"ArticulatCF";
+    src:url(./fonts/ArticulatCF-LightOblique.otf?raw=true) format('opentype'),
+        url(./fonts/ArticulatCF-LightOblique.ttf?raw=true) format('truetype');
+    font-weight:300;
+    font-style:oblique;
+}
+
+@font-face {
+    font-family:"ArticulatCF";
+    src:url(./fonts/ArticulatCF-Medium.otf?raw=true) format('opentype'),
+        url(./fonts/ArticulatCF-Medium.ttf?raw=true) format('truetype');
+    font-weight:500;
+}
+
+@font-face {
+    font-family:"ArticulatCF";
+    src:url(./fonts/ArticulatCF-MediumOblique.otf?raw=true) format('opentype'),
+        url(./fonts/ArticulatCF-MediumOblique.ttf?raw=true) format('truetype');
+    font-weight:500;
+    font-style:oblique;
+}
+
+
+@font-face {
+    font-family:"ArticulatCF";
+    src:url(./fonts/ArticulatCF-Thin.otf?raw=true) format('opentype'),
+        url(./fonts/ArticulatCF-Thin.ttf?raw=true) format('truetype');
+    font-weight:100;
+}
+
+
+@font-face {
+    font-family:"ArticulatCF";
+    src:url(./fonts/ArticulatCF-ThinOblique.otf?raw=true) format('opentype'),
+        url(./fonts/ArticulatCF-ThinOblique.ttf?raw=true) format('truetype');
+    font-weight:100;
+    font-style:oblique;
+}
+
+
+@font-face {
+    font-family:"ArticulatCFv2";
+    src:url(./fonts/ArticulatCFv2-Bold.otf?raw=true) format('opentype'),
+        url(./fonts/ArticulatCFv2-Bold.ttf?raw=true) format('truetype');
+    font-weight:700;
+}
+
+
+@font-face {
+    font-family:"ArticulatCFv2";
+    src:url(./fonts/ArticulatCFv2-BoldOblique.otf?raw=true) format('opentype'),
+        url(./fonts/ArticulatCFv2-BoldOblique.ttf?raw=true) format('truetype');
+    font-weight:700;
+    font-style:oblique;
+}
+
+@font-face {
+    font-family:"ArticulatCFv2";
+    src:url(./fonts/ArticulatCFv2-DemiBold.otf?raw=true) format('opentype'),
+        url(./fonts/ArticulatCFv2-DemiBold.ttf?raw=true) format('truetype');
+    font-weight:600;
+}
+
+/* General tag styling */
+* {
+    box-sizing:border-box;
+}
+
+body {
+    margin:0;
+    overflow-x:hidden;
+}
+
+#root {
+    padding:15px;
+    margin:0 auto;
+}
+
+/* Page structure */
+.projects {
+    margin:0 15px 0 15px;
+}
+
+/* General purpose classes */
+.color-primary { color:#f54e51 }
+.bg-primary { background:#f54e51 }
+.color-alt { color:#f54e51 }
+.bg-alt { background:#f54e51 }
+.text-behind {
+    position:relative;
+    z-index:-2;
+}
+
+@media (min-width: 920px) {
+    
 }
