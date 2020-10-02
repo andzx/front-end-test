@@ -6,6 +6,7 @@
     font-weight:600;
     font-style:oblique;
 }
+
 @font-face {
     font-family:"ArticulatCF";
     src:url(./fonts/ArticulatCF-ExtraBold.otf?raw=true) format('opentype'),
@@ -81,14 +82,12 @@
     font-style:oblique;
 }
 
-
 @font-face {
     font-family:"ArticulatCF";
     src:url(./fonts/ArticulatCF-Thin.otf?raw=true) format('opentype'),
         url(./fonts/ArticulatCF-Thin.ttf?raw=true) format('truetype');
     font-weight:100;
 }
-
 
 @font-face {
     font-family:"ArticulatCF";
@@ -98,14 +97,12 @@
     font-style:oblique;
 }
 
-
 @font-face {
     font-family:"ArticulatCFv2";
     src:url(./fonts/ArticulatCFv2-Bold.otf?raw=true) format('opentype'),
         url(./fonts/ArticulatCFv2-Bold.ttf?raw=true) format('truetype');
     font-weight:700;
 }
-
 
 @font-face {
     font-family:"ArticulatCFv2";
@@ -145,7 +142,7 @@ body {
 /* General purpose classes */
 .color-primary { color:#f54e51 }
 .bg-primary { background:#f54e51 }
-.color-alt { color:#f54e51 }
+.color-alt { color:#DABABA }
 .bg-alt { background:#f54e51 }
 .text-behind {
     position:relative;

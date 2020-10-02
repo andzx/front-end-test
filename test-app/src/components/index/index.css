@@ -4,32 +4,29 @@ header.header-index {
 }
 
 header.header-index > h1 {
-    max-width:425px;
+    max-width:638px;
     margin-top:80px;
+    font-size:110px;
+    line-height:97px;
+    margin-bottom:28px;
     font-family:"ArticulatCF", "ArticulatCFv2";
 }
 
 header.header-index > p {
     margin:0;
-    max-width:475px;
+    max-width:685px;
     font-weight:bold;
     font-family:"ArticulatCF", "ArticulatCFv2";
-    font-weight:light;
-    line-height:17pt;
+    font-weight:600;
+    font-size:24px;
+    line-height:26.4px;
 }
 
-header.header-index > p.arrow-bottom {
+header.header-index > p.arrow-downwards {
     display:table;
     font-size:48pt;
     line-height:48pt;
-    margin-left:-10px;
-}
-
-header.header-index > h1 {
-    font-size:56pt;
-    line-height:52pt;
-    margin-bottom:28px;
-    font-family:"ArticulatCF";
+    margin-left:-6px;
 }
 
 .line {
@@ -38,12 +35,12 @@ header.header-index > h1 {
     z-index:-1;
 }
 
-.line-narrow {
-    height:15px;
+.line-thin {
+    height:20px;
 }
 
 .line-thick {
-    height:55px;
+    height:75px;
     top:130px;
 }
 
@@ -69,29 +66,63 @@ header.header-index > h1 {
     z-index:-3;
 }
 
+.projects {
+    display:flex;
+}
+
+.project {
+    position:relative;
+    width:380px;
+}
+
+.project > .date {
+    position:absolute;
+    top:20.5px;
+    right:0;
+    background:#fff;
+    padding:13.5px;
+    font-family:"ArticulatCF", "ArticulatCFv2";
+    font-weight:bold;
+    font-size:16px;
+    line-height:16px;
+}
+
+.project > .author,
+.project > .title {
+    font-size:30px;
+    line-height:42px;
+    font-weight:bold;
+}
+
+.project > .title {
+    display:block;
+    font-family:"ArticulatCF", "ArticulatCFv2";
+}
+
 @media (min-width: 768px) {
     header.header-index > h1,
     header.header-index > p {
         margin-left:60px;
     }
 
-    header.header-index > p.arrow-bottom {
-        margin-left:50px;
+    header.header-index > p.arrow-downwards {
+        margin-left:54px;
     }
     
     .line-one {
-        left:-175px;
-        top:240px;
-        transform:rotate(-15deg);
+        left:-195px;
+        top:330px;
+        transform:rotate(-16.5deg);
     }
 
     .line-two {
-        left:-155px;
-        top:225px;
+        left:-175px;
+        top:305px;
+        transform:rotate(-7.2deg);
     }
 
     .line-three {
         left:-175px;
-        top:50px;
+        top:85px;
     }
 }
