@@ -126,29 +126,27 @@
 
 body {
     margin:0;
-    overflow-x:hidden;
 }
 
 #root {
-    padding:15px;
-    margin:0 auto;
-}
-
-/* Page structure */
-.projects {
-    margin:0 15px 0 15px;
+    overflow-x:hidden;
 }
 
 /* General purpose classes */
-.color-primary { color:#f54e51 }
+.color-primary { color:#f54e51; stroke:#f54e51 }
 .bg-primary { background:#f54e51 }
 .color-alt { color:#DABABA }
-.bg-alt { background:#f54e51 }
+.bg-alt { background:#DABABA }
 .text-behind {
     position:relative;
     z-index:-2;
 }
 
-@media (min-width: 920px) {
-    
+.loading1,
+.loading2,
+.loading3 {
+    width:25px;
+    height:25px;
+    border-radius:50%;
+    background:f54e51;
 }

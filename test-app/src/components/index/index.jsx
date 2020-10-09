@@ -2,7 +2,8 @@ import React, {useEffect, useState} from 'react';
 
 function Index() {
     // Data
-    const [projects, setProjects] = useState([]);
+    const [columns, setColumns] = useState([]);
+    const [error, setError] = useState(null);
 
     // Controls
     useEffect(() => {
@@ -11,11 +12,25 @@ function Index() {
       .then(res => res.json())
       .then(
         (result) => {
-            setProjects(result.tiles);
+            let column = 0;
+            let columns = [
+                {"projects": []},
+                {"projects": []},
+                {"projects": []}
+            ];
+            
+            // Place tiles in the right columns
+            for (let i = 0; i < result.tiles.length; i++) {
+                if (column > 2) column = 0;
+                columns[column].projects.push(result.tiles[i]);
+                column++;
+            }
+            
+            setColumns(columns);
         },
 
         (error) => {
-
+            setError("Website data could not be loaded, try refreshing the page");
         });
     }, []);
 
@@ -28,18 +43,41 @@ function Index() {
                 possible. Code the template in HTML/CSS and try to avoid 3. 
                 party frameworks as much as possible. Creating the page with 
                 React components will grant extra megamate bonus points.</p>
-                <p class="arrow-downwards color-primary">&#11022;</p>
+                <svg class="arrow-downwards color-primary" width="125" height="46" viewBox="0 0 125 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 3H106.86V40.7655" stroke-width="6"/>
+                    <path d="M122.5 24.2656L107 41.2656L90.5 24.2656" stroke-width="6"/>
+                </svg>
                 <div class="line line-one line-thin bg-primary"></div>
                 <div class="line line-two line-thin bg-primary"></div>
                 <div class="line line-three line-thick bg-primary"></div>
             </header>
             <div class="projects" id="#tiles">
-                <div class="project alt">
-                    <img title="I Imagined that Things Were Speaking" src="https://raw.githubusercontent.com/rommel-dk/front-end-test/master/assignment-assets/images/tiles-image-1.jpg" alt="I Imagined that Things Were Speaking"/>
-                    <div class="date">Project 29 August 2019</div>
-                    <div class="author color-alt">Jams Bonham</div>
-                    <div class="title">I Imagined that Things Were Speaking</div>
-                </div>
+                {error}
+                
+                {columns ? <>
+                    {columns.map((column, columnIndex) => {
+                        return (<div class={"column column" + columnIndex}>
+                            {columns[columnIndex].projects.map((project, index) => {
+                                return(<div class={"project " + project.appearances["color-scheme"]} key={index}>
+                                    <img title={project.title} src={project.image} alt={project["image-alt"]} />
+                                    <div class="date">Project {project.date}</div>
+                                    <div id={project.href} class={"author color-" + project.appearances["color-scheme"]}>{project.author}</div>
+                                    <div class="title">{project.title}</div>
+                                    <a href={project.href} class="color-primary">
+                                        <svg class="color-primary" width="62" height="21" viewBox="0 0 62 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0 10.334H58.9158" stroke-width="3"/>
+                                            <path d="M51.0001 2L59.2001 10.2344L51.0001 19" stroke-width="3"/>
+                                        </svg>
+                                    </a>
+                                </div>)
+                            })}
+                        </div>)
+                    })}
+                </> : <div class="loading">
+                    <div class="loading1"></div>
+                    <div class="loading2"></div>
+                    <div class="loading3"></div>
+                </div>}
             </div>
         </>
     );

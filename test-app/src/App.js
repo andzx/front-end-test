@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
+import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import './App.css';
 
 // Import components
@@ -12,7 +12,7 @@ import "./components/project/project.css";
 
 function App() {
     return (
-        <Router>
+        <Router basename={'/test'}>
             <Switch>
                 <Route path="/" exact={true} component={Index}></Route>
                 <Route path="/project" component={Project}></Route>
