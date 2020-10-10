@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 
-function Index() {
-    // Fetch page contents
+function Project() {
+    // Things to do at component startup
     useEffect(() => {
     
     }, []);
@@ -12,4 +12,4 @@ function Index() {
     );
 }
 
-export default Index;
+export default Project;
